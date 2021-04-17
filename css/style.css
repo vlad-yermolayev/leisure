@@ -1,0 +1,334 @@
+:root {
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --light-gray-color: #e5e5e5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-weight: 500;
+  color: var(--black-color);
+  line-height: 1;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.download-apps {
+  display: flex;
+  padding: 50px 0;
+  background-color: var(--light-gray-color);
+}
+
+.download-apps .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.download-apps__title {
+  max-width: 1055px;
+  font-size: 35px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.download-apps__subtitle {
+  max-width: 800px;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.download-apps__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.download-apps__links a {
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: var(--white-color);
+  padding: 25px 21px 25px;
+  border-radius: 15px;
+  background-color: var(--black-color);
+  transition: transform .3s linear;
+}
+
+.download-apps__links a:hover {
+  transform: scale(1.01);
+}
+
+.download-apps__links a::before {
+  content: '';
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+.download-apps__links a:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.download-apps__links a:nth-of-type(1)::before {
+  content: url('../img/apple-store-icon.svg');
+}
+
+.download-apps__links a:nth-of-type(2)::before {
+  content: url('../img/google-play-icon.svg');
+}
+
+.slider {
+  display: flex;
+  padding: 30px 0;
+  background-color: var(--black-color);
+}
+
+.slider .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.slider__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.slider__items img {
+  width: 100%;
+}
+
+.slider__nav {
+  margin-top: 10px;
+}
+
+.slider__nav button {
+  height: 10px;
+  width: 20px;
+  border: none;
+  padding: 0;
+  border-radius: 4px;
+  background-color: var(--white-color);
+}
+
+.slider__text {
+  max-width: 800px;
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--white-color);
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+.ideas {
+  padding: 50px 0 100px;
+}
+
+.ideas .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.ideas__title {
+  max-width: 500px;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: -0.02em;
+  margin-bottom: 50px;
+}
+
+.ideas__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.ideas__items li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.ideas__items li:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.ideas__items li::before {
+  content: '';
+  width: 150px;
+  height: 150px;
+  margin-bottom: 18px;
+}
+
+.ideas__items li:nth-of-type(1)::before {
+  content: url('../img/lightbulb-icon.svg');
+}
+
+.ideas__items li:nth-of-type(2)::before {
+  content: url('../img/browse-icon.svg');
+}
+
+.ideas__items li:nth-of-type(3)::before {
+  content: url('../img/tel-icon.svg');
+}
+
+.ideas__items span {
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+
+.ideas__items p {
+  max-width: 400px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+}
+
+@media only screen and (min-width: 1440px) {
+  .container {
+    padding: 0 52px;
+  }
+
+  .download-apps {
+    padding: 200px 0 100px;
+  }
+
+  .download-apps__title {
+    font-size: 75px;
+  }
+  
+  .download-apps__subtitle {
+    font-size: 25px;
+  }
+
+  .download-apps__links {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .download-apps__links a:not(:last-child) {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+
+  .download-apps__links a {
+    min-width: 270px;
+    min-height: 110px;
+  }
+
+  .slider {
+    padding: 85px 0;
+  }
+
+  .slider__wrapper {
+    padding: 0 80px;
+  }
+
+  .slider__nav {
+    margin-top: 0;
+  }
+  
+  .slider__nav button {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    height: unset;
+    width: unset;
+    border-radius: unset;
+    background-color: transparent;
+  }
+  
+  .slider__nav button::before {
+    content: '';
+    width: 80px;
+    height: 80px;
+  }
+  
+  .slider__nav button:nth-of-type(1) {
+    left: -80px;
+    transform: translateY(-50%);
+  }
+  
+  .slider__nav button:nth-of-type(2) {
+    right: -80px;
+    transform: translateY(-50%) rotate(180deg);
+  }
+  
+  .slider__nav button:nth-of-type(1)::before {
+    content: url('../img/arrow.svg');
+  }
+
+  .slider__nav button:nth-of-type(2)::before {
+    content: url('../img/arrow.svg');
+  }
+  
+  .slider__text {
+    font-size: 45px;
+  }
+
+  .ideas {
+    padding: 100px 0 200px;
+  }
+
+  .ideas__title {
+    font-size: 50px;
+  }
+
+  .ideas__items {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .ideas__items li:not(:last-child) {
+    margin-right: 50px;
+    margin-bottom: 0;
+  }
+
+  .ideas__items span {
+    font-size: 35px;
+  }
+  
+  .ideas__items p {
+    font-size: 25px;
+  }
+}
